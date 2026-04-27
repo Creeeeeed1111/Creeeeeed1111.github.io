@@ -34,18 +34,49 @@
     <section class="my-5">
         <h3>Projects</h3>
         
-        <div class="project-card">
-            <h5>我的第一个神秘项目</h5>
-            <p>简短的项目描述：使用 C++ 和 OpenGL 开发的渲染器。</p>
-            <button class="btn btn-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#project1">
-                Read More
-            </button>
-            <div class="collapse mt-2" id="project1">
-                <div class="card card-body">
-                    这里写详细的技术细节、实现过程和心得体会。
-                </div>
+        <div class="project-card border rounded shadow-sm bg-white p-3 mb-5">
+    <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+            <div class="ratio ratio-16x9 border rounded bg-dark overflow-hidden shadow-sm">
+                <video muted autoplay loop playsinline>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    你的浏览器不支持 HTML5 视频。
+                </video>
+            </div>
+
+            </div>
+
+        <div class="col-lg-6">
+            <h4 class="fw-bold text-primary">Vulkan 渲染器 (Vulkan Renderer)</h4>
+            <p class="text-muted small mb-2">C++ | Vulkan API | MoltenVK</p>
+            <p class="project-description">
+                这是一个基于 Vulkan API 实现的高性能图形渲染器。实现了 physically based shading (PBR) 模型，支持 Lambertian 漫反射和 microfacet BRDF 镜面反射。
+            </p>
+            
+            <div class="d-flex gap-2 mt-3">
+                <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#vulkanDetail">
+                    Read More
+                </button>
+                <a href="https://github.com/Creeeeeeed1211/你的仓库名" class="btn btn-sm btn-dark" target="_blank">
+                    <i class="bi bi-github"> </i>View Source
+                </a>
             </div>
         </div>
+    </div>
+
+    <div class="collapse mt-4" id="vulkanDetail">
+        <div class="card card-body bg-light border-0 rounded p-4">
+            <h6 class="fw-bold">技术实现细节：</h6>
+            <ul class="small lh-lg">
+                <li>**PBR 材质**：实现了基于 Beckmann 法线分布函数的微表面 BRDF。</li>
+                <li>**法线贴图 (Normal Mapping)**：增加了表面细节。</li>
+                <li>**Debug 模式**：支持 Mipmap 等级、深度缓存、顶点密度等多种可视化调试视图。</li>
+                <li>**跨平台**：利用 MoltenVK 在 macOS 上成功运行。</li>
+            </ul>
+            <p class="small text-secondary mb-0">这里可以展示你对图形学理论的深刻理解，非常重要。</p>
+        </div>
+    </div>
+</div>
 
     </section>
 
