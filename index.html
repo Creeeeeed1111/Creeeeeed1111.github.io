@@ -16,7 +16,7 @@
 
 <div class="container">
     <header class="header-section">
-        <h1>Creed1211's Portfolio</h1>
+        <h1>Sicheng Chen's Portfolio</h1>
         <p class="lead"><em>You can call me  Sicheng!</em></p>
         <div class="mt-3">
             <a href="mailto:bploiolqd@gmail.com" class="btn btn-outline-primary btn-sm">Email</a>
@@ -26,57 +26,100 @@
 
     <hr>
 
-    <section class="my-5">
-        <h3>About</h3>
-        <p>我是</p>
-    </section>
-
-    <section class="my-5">
-        <h3>Projects</h3>
+   <section class="my-5">
+        <h3 class="mb-4">Projects</h3>
         
-        <div class="project-card border rounded shadow-sm bg-white p-3 mb-5">
-    <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
-            <div class="ratio ratio-16x9 border rounded bg-dark overflow-hidden shadow-sm">
-                <video muted autoplay loop playsinline>
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    你的浏览器不支持 HTML5 视频。
-                </video>
-            </div>
-
-            </div>
-
-        <div class="col-lg-6">
-            <h4 class="fw-bold text-primary">Vulkan 渲染器 (Vulkan Renderer)</h4>
-            <p class="text-muted small mb-2">C++ | Vulkan API | MoltenVK</p>
-            <p class="project-description">
-                这是一个基于 Vulkan API 实现的高性能图形渲染器。实现了 physically based shading (PBR) 模型，支持 Lambertian 漫反射和 microfacet BRDF 镜面反射。
-            </p>
+        <!-- 使用 row-cols-1 (手机单排) 和 row-cols-md-2 (电脑双排) -->
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             
-            <div class="d-flex gap-2 mt-3">
-                <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#vulkanDetail">
-                    Read More
-                </button>
-                <a href="https://github.com/Creeeeeeed1211/你的仓库名" class="btn btn-sm btn-dark" target="_blank">
-                    <i class="bi bi-github"> </i>View Source
-                </a>
+            <!-- 项目栏位 1: Vulkan -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9 bg-dark">
+                        <video muted autoplay loop playsinline>
+                            <source src="assets\video\vulkanRenderShowcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Vulkan 渲染器</h5>
+                        <p class="card-text small text-muted">C++ | Vulkan | MoltenVK</p>
+                        <p class="card-text" style="font-size: 0.9rem;">高性能图形渲染器，支持 PBR 材质与法线贴图。</p>
+                        
+                        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detail1">Read More</button>
+                        
+                        <div class="collapse mt-3" id="detail1">
+                            <div class="p-3 bg-light rounded" style="font-size: 0.85rem;">
+                                <ul>
+                                    <li>基于 Beckmann 分布的 BRDF</li>
+                                    <li>支持多级 Mipmap 调试</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="collapse mt-4" id="vulkanDetail">
-        <div class="card card-body bg-light border-0 rounded p-4">
-            <h6 class="fw-bold">技术实现细节：</h6>
-            <ul class="small lh-lg">
-                <li>**PBR 材质**：实现了基于 Beckmann 法线分布函数的微表面 BRDF。</li>
-                <li>**法线贴图 (Normal Mapping)**：增加了表面细节。</li>
-                <li>**Debug 模式**：支持 Mipmap 等级、深度缓存、顶点密度等多种可视化调试视图。</li>
-                <li>**跨平台**：利用 MoltenVK 在 macOS 上成功运行。</li>
-            </ul>
-            <p class="small text-secondary mb-0">这里可以展示你对图形学理论的深刻理解，非常重要。</p>
+            <!-- 项目栏位 2: 预留栏位 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9 bg-secondary d-flex align-items-center justify-content-center text-white">
+                        <span>待添加项目图片/视频</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">光线追踪器 (Ray Tracer)</h5>
+                        <p class="card-text small text-muted">C++ | OpenGL（left side） | CPU based</p>
+                        <p class="card-text" style="font-size: 0.9rem;">基于 GPU 加速的路径追踪实现，支持软阴影与镜面反射。</p>
+                        
+                        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detail2">Read More</button>
+                        
+                        <div class="collapse mt-3" id="detail2">
+                            <div class="p-3 bg-light rounded" style="font-size: 0.85rem;">
+                                <ul>
+                                    <li>BVH 加速结构实现</li>
+                                    <li>支持重要性采样</li>
+                                    <li>蒙特卡洛积分求解渲染方程</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目栏位 3: 预留栏位 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9 bg-secondary d-flex align-items-center justify-content-center text-white">
+                        <span>待添加项目图片/视频</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">物理引擎项目</h5>
+                        <p class="card-text small text-muted">C++ | OpenGL</p>
+                        <p class="card-text" style="font-size: 0.9rem;">自制 3D 刚体物理引擎，处理碰撞检测与动力学模拟。</p>
+                        
+                        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detail3">Read More</button>
+                        
+                        <div class="collapse mt-3" id="detail3">
+                            <div class="p-3 bg-light rounded" style="font-size: 0.85rem;">
+                                <li>GJK/EPA 碰撞算法</li>
+                                <li>脉冲约束求解器</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目栏位 4: 预留栏位 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-dashed d-flex align-items-center justify-content-center py-5">
+                    <div class="text-center text-muted">
+                        <p class="mb-0">More Projects Coming Soon...</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</div>
+    </section>
 
     </section>
 
