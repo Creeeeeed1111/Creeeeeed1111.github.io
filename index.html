@@ -125,7 +125,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Animation and Physics Simulation</h5>
                         <p class="card-text small text-muted">C++ | OpenGL</p>
-                        <p class="card-text" style="font-size: 0.9rem;">A custom 3D rigid body physics engine handling collision detection and dynamics simulation.</p>
+                        <p class="card-text" style="font-size: 0.9rem;">bac</p>
                         
                         <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detail3">Read More</button>
                         
@@ -140,7 +140,33 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Project 4: Physics Engine -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9 bg-secondary d-flex align-items-center justify-content-center text-white text-center p-3">
+                        
+                        <video muted autoplay loop playsinline title="Vulkan Engine Showcase">
+                            <source src="assets/video/rocketLaunch.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">rocketLaunch</h5>
+                        <p class="card-text small text-muted">C++ | OpenGL</p>
+                        <p class="card-text" style="font-size: 0.9rem;">basic course work for OpenGL Beginner which cover modelling, animation ,texturing.</p>
+                        
+                        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detail3">Read More</button>
+                        
+                        <div class="collapse mt-3" id="detail3">
+                            <div class="p-3 bg-light rounded" style="font-size: 0.85rem;">
+                                <ul class="mb-0">
+                                    <li>GJK/EPA algorithms for collision detection.</li>
+                                    <li>Impulse-based constraint solver for stable stacking.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Project 4: Placeholder -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-dashed d-flex align-items-center justify-content-center py-5">
@@ -153,6 +179,27 @@
         </div>
 
         <h3 class="mb-4">Team Engine Features</h3>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card border-0 shadow-lg overflow-hidden" style="border-radius: 15px;">
+                    <div class="ratio ratio-16x9 bg-dark">
+                        <video controls poster="assets/images/engine-poster.jpg">
+                            <source src="assets/video/engineTrailer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card-body bg-dark text-white p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h4 class="fw-bold mb-1">Official Engine Showcase Trailer</h4>
+                                <p class="text-secondary mb-0 small">A comprehensive demonstration of our team-developed rendering architecture and physical systems.</p>
+                            </div>
+                            <a href="https://github.com/SamuilG/Rafaels-Bikers-Game-Engine.git" class="btn btn-primary px-4" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row row-cols-1 row-cols-md-2 g-4">
             
             <!-- Feature 1: Lighting & Shadows -->
@@ -160,9 +207,9 @@
                 <div class="card h-100 shadow-sm border-0">
                     <div class="ratio ratio-16x9 bg-dark rounded-top d-flex align-items-center justify-content-center text-white">
                         <!-- 建议替换为展示 CSM 阴影切换或多光源场景的视频/截图 -->
-                          <video muted autoplay loop playsinline title="Vulkan Engine Showcase">
-                        <source src="assets/video/CSMShowcase.mp4" type="video/mp4">
-                    </video>
+                        <video muted autoplay loop playsinline title="Vulkan Engine Showcase">
+                            <source src="assets/video/CSMShowcase.mp4" type="video/mp4">
+                        </video>
                         
                     </div>
                     <div class="card-body">
@@ -182,7 +229,9 @@
                 <div class="card h-100 shadow-sm border-0">
                     <div class="ratio ratio-16x9 bg-dark rounded-top d-flex align-items-center justify-content-center text-white">
                         <!-- 建议展示 运动模糊或镜头畸变效果 -->
-                        <span>[Post-Processing Showcase]</span>
+                        <video muted autoplay loop playsinline title="Vulkan Engine Showcase">
+                            <source src="assets/video/motionBlurShowcase.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Cinematic Post-Processing</h5>
@@ -233,7 +282,47 @@
                     </div>
                 </div>
             </div>
-
+             
+             <!-- Feature 5: SSR & IBL -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9 bg-dark rounded-top d-flex align-items-center justify-content-center text-white">
+                        
+                        <video muted autoplay loop playsinline title="Vulkan Engine Showcase">
+                            <source src="assets/video/metalCube.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">IBL & SSR</h5>
+                        <p class="card-text small text-muted">Post-FX Pipeline | ACES</p>
+                        <ul class="small ps-3 text-secondary">
+                            <li><strong>Lens Effects:</strong> Implemented Chromatic Aberration and Lens Distortion for realistic camera optics.</li>
+                            <li><strong>Motion Blur:</strong> Velocity-buffer based motion blur for high-speed fluidity.</li>
+                            <li><strong>ACES Tonemapping:</strong> Industry-standard color grading to ensure high dynamic range fidelity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 5: SSAO -->
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9 bg-dark rounded-top d-flex align-items-center justify-content-center text-white">
+                        
+                        <video muted autoplay loop playsinline title="Vulkan Engine Showcase">
+                           
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Ambienrt Occlusion</h5>
+                        <p class="card-text small text-muted">Post-FX Pipeline | ACES</p>
+                        <ul class="small ps-3 text-secondary">
+                            <li><strong>Lens Effects:</strong> Implemented Chromatic Aberration and Lens Distortion for realistic camera optics.</li>
+                            <li><strong>Motion Blur:</strong> Velocity-buffer based motion blur for high-speed fluidity.</li>
+                            <li><strong>ACES Tonemapping:</strong> Industry-standard color grading to ensure high dynamic range fidelity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
