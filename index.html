@@ -13,6 +13,8 @@
         .border-dashed { border: 2px dashed #e6dee2 !important; }
         .card { border: none; transition: transform 0.2s ease, shadow 0.2s ease; }
         .card:hover { transform: translateY(-4px); }
+        .ratio.ratio-16x9 { aspect-ratio: 16 / 9; }
+        .ratio > video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
     </style>
 </head>
 <body>
@@ -56,6 +58,7 @@
                     </div>
                 </div>
             </div>
+     </div>
 
     <section class="my-5">
         <h3 class="mb-4">Course Projects</h3>
@@ -72,7 +75,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="card-title fw-bold mb-0">High-Performance Vulkan PBR Engine</h5>
-                            <span class="badge bg-primary">Graphics</span>
+                            <span class="badge bg-primary">Rasterizaiton</span>
                         </div>
                         <div class="mb-3">
                             <span class="badge rounded-pill text-bg-light border text-dark">C++</span>
@@ -182,7 +185,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <h5 class="card-title fw-bold mb-0">Procedural Aerospace Graphics Environment</h5>
-                            <span class="badge bg-primary">Graphics</span>
+                            <span class="badge bg-primary">rasterization</span>
                         </div>
                         <div class="mb-3">
                             <span class="badge rounded-pill text-bg-light border text-dark">C++</span>
@@ -364,7 +367,7 @@
                         </div>
                         <div class="mb-3">
                             <span class="badge rounded-pill text-bg-light border text-dark">Bike Physics Simulation</span>
-                            <span class="badge rounded-pill text-bg-light border text-dark">Camera Geometry</span>
+                            <span class="badge rounded-pill text-bg-light border text-dark">Camera movement</span>
                             <span class="badge rounded-pill text-bg-light border text-dark">Raycasting</span>
                         </div>
                         <p class="card-text text-secondary" style="font-size: 0.9rem; text-align: justify;">
@@ -429,7 +432,7 @@
             <div class="col">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="ratio ratio-16x9 bg-dark rounded-top overflow-hidden">
-                        <video muted autoplay loop playsinline title="SSAO Showcase">
+                        <video muted autoplay loop playsinline preload="metadata" title="SSAO Showcase">
                             <source src="assets/video/SSAOShowcase.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -457,6 +460,44 @@
                                     <li class="mb-2"><strong>• Screen-Space Ambient Occlusion (SSAO):</strong> Sampled hemispherical normal-oriented vector spaces to evaluate local occlusion factors in real time.</li>
                                     <li class="mb-2"><strong>• Noise Reduction Filters:</strong> Coupled raw sampling loops with advanced edge-preserving depth-aware smart blur filters.</li>
                                     <li><strong>• Performance Scaling:</strong> Highly optimized shader execution profiles that balance contact shadow clarity with rendering budgets.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9 bg-dark rounded-top overflow-hidden">
+                        <video muted autoplay loop playsinline preload="metadata" title="Portal Rendering Showcase">
+                            <source src="assets/video/portalShowcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title fw-bold">Real-Time Portal Rendering</h5>
+                            <span class="badge bg-primary">Portals</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge rounded-pill text-bg-light border text-dark">Stencil Buffers</span>
+                            <span class="badge rounded-pill text-bg-light border text-dark">Recursive Views</span>
+                            <span class="badge rounded-pill text-bg-light border text-dark">Camera Transforms</span>
+                        </div>
+                        <p class="card-text text-secondary" style="font-size: 0.9rem; text-align: justify;">
+                            A real-time portal rendering system that maps connected spaces through secondary camera views, depth-aware masking, and precise transform logic for seamless scene traversal.
+                        </p>
+                        
+                        <button class="btn btn-sm btn-outline-primary w-100 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#engineFX7">
+                            View Technical Specifications
+                        </button>
+
+                        <div class="collapse mt-3" id="engineFX7">
+                            <div class="p-3 bg-light rounded" style="font-size: 0.85rem; color: #444;">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><strong>&bull; Portal View Projection:</strong> Rendered linked spaces from transformed camera viewpoints to align the visible portal surface with the destination scene.</li>
+                                    <li class="mb-2"><strong>&bull; Depth & Mask Control:</strong> Used stencil/depth-buffer logic to constrain the portal view to the portal geometry without leaking into the surrounding frame.</li>
+                                    <li><strong>&bull; Recursive Rendering Support:</strong> Structured the pass flow to support nested portal visibility while keeping the real-time frame budget stable.</li>
                                 </ul>
                             </div>
                         </div>
